@@ -1,0 +1,16 @@
+body {
+    overflow-x: scroll;
+}
+
+body::-webkit-scrollbar {
+    overflow-x: hidden;
+}
+
+.flow {
+    overflow-x: scroll;
+}
+
+.flow::-webkit-scrollbar {
+    overflow-x: hidden;
+}
+

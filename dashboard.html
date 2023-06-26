@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>adminDashboard/home</title>
+  <link rel="stylesheet" href="./css/dashboard.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+   integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+            sm: '480px',
+            md: '768px',
+            lg: '976px',
+            xl: '1440px'
+          },
+        extend: {
+          colors: {
+            lightPurple: '#6E39CB',
+            Danger: '#F93131',
+            lightBlue: '#D7FFC3',
+            brandBlue: '#533FE4',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans bg-gray-50">
+    <article class="flex">
+      <div class="sidebar bg-gray-50 overflow- shadow-lg fixed top-0 bottom-0 lg:left-0  w-[300px] h-[100vh] hidden lg:block" id="menu">
+        <div class="logo flex justify-center items-center py-8">
+          <img src="images/LOGO2.png" alt="">
+        </div>
+        <div class="items">
+           <ul class="flex-col justify-center items-center pt-4">
+             <li class="border-l-4 border-lightPurple pr-4">
+              <a class="flex gap-4 px-8 text-lightPurple items-center py-2 rounded-r-md hover:opacity-80 bg-[#DECCFE]" href="#">
+                <img src="images/home.png" alt="">
+                <span class="capitalize font-medium text-xl">home</span>
+              </a>
+             </li>
+
+             <li class="pr-4 mt-2 border-l-4 border-transparent">
+              <a class="flex gap-4 px-8 text-gray-700 items-center py-2" href="podcastersList.html">
+                <img src="images/Vector.png" alt="">
+                <span class="capitalize font-medium text-xl">Podcasters</span>
+              </a>
+             </li>
+
+             <li class="pr-4 mt-2 border-l-4 border-transparent">
+              <a class="flex gap-4 px-8 text-gray-700 items-center py-2" href="./publishedPodcasts.html">
+                <img src="images/Vector2.png" alt="">
+                <span class="capitalize font-medium text-xl">Published Podcasts</span>
+              </a>
+             </li>
+           </ul>
+        </div>
+        <div class="bottom bg-white px-4 py-2 rounded shadow-lg bottom-0 absolute my-4 mx-8">
+           <div class="flex justify-between">
+            <div class="flex items-center gap-4">
+              <img src="images/profile-user 2.png" alt="">
+              <div class="flex-col flex text-lightPurple">
+                  <a href="#">Administrator</a>
+                  <a href="#">admin@jiveify.com</a>
+              </div>
+          </div>
+          <a href="#">
+            <img src="images/dot.png" alt="">
+           </a>
+           </div>
+        </div>
+      </div>
+      <div class="w-full lg:ml-[20rem] px-6">
+      <section>
+        <div class="flex justify-between items-center">
+          <div class="flex items-center gap-6 mt-4">
+            <h1 class="font-medium hidden md:block text-lightPurple text-xl capitalize">dashboard</h1>
+            <div class="flex items-center bg-gray-100 w-full px-6 py-[6px] rounded-full">
+               <input type="text" class="px-4 py-[5px] bg-gray-100 focus:outline-none" placeholder="Search anything here...">
+               <button type="submit" class="">
+                  <i class="bi bi-search text-xl text-gray-900"></i>
+               </button>
+            </div>
+        </div>
+        <a href="#" class="bg-black text-4xl font-semibold text-gray-200 rounded-md mt-2 hover:opacity-80 mx-4  lg:hidden w-[35px] block" id="burger">
+          <i class="bi bi-filter-left"></i>
+        </a>
+         </div>
+      </section>
+
+        <!--  -->
+        <div class="mt-8">
+          <h2 class="font-medium text-xl ">Active users right now</h2>
+        </div>
+        <div class="mt-8">
+           <div class="sm:flex-col md:flex-row flex gap-4 md:gap-8 items-center">
+            <div class="">
+              <div class="bg-gray-50 shadow-lg md:w-[8rem] hover:shadow-none px-2 py-2 text-center">
+                  <h1 class="font-medium text-lightPurple text-4xl ">300</h1>
+                  <p class="text-xs font-semibold mt-4">Podcasters in total</p>
+              </div>
+              <div class="bg-gray-50 shadow-lg hover:shadow-none md:w-[8rem]  mt-2 px-2 py-2 text-center">
+                <img src="./images/Vector 126.png" class="ml-[3rem]  md:ml-0" alt="">
+                <p class="text-xs font-semibold">Graph showing Active Users per day</p>
+            </div>
+          </div>
+          <div class="">
+            <img src="images/transaction graph.png" alt="">
+          </div>
+           </div>
+        </div>
+
+        <!--  -->
+
+        <div class="mt-6">
+            <div class="sm:flex-col md:flex-row flex gap-4">
+               <div class="bg-gray-50 shadow-lg md:w-[15rem] hover:shadow-none py-2 px-4 w-full">
+                <div class="flex gap-2 items-center ">
+                   <img src="./images/users.png" class="p-[3px] rounded bg-[#DECCFE]" alt="">
+                   <p class="capitalize">total users</p>
+                </div>
+                <h1 class="text-center py-2 font-semibold text-4xl">35,056</h1>
+                <div class="w-full bg-[#DECCFE] rounded-full my-2">
+                   <div class="h-1 bg-lightPurple rounded-full" style="width: 50%;"></div>
+                </div>
+               </div>
+
+               <div class="bg-gray-50 shadow-lg md:w-[15rem] hover:shadow-none w-full py-2 px-4">
+                <div class="flex gap-2 items-center ">
+                   <img src="./images/Vector54.png" class="p-[3px] rounded bg-[#D7FFC3]" alt="">
+                   <p class="capitalize">Published Podcasts</p>
+                </div>
+                <h1 class="text-center py-2 font-semibold text-4xl">35,056</h1>
+                <div class="w-full bg-lightBlue rounded-full my-2">
+                   <div class="h-1 bg-brandBlue rounded-full" style="width: 30%;"></div>
+                </div>
+               </div>
+
+               <div class="bg-gray-50 shadow-lg md:w-[17rem] hover:shadow-none w-full py-2 px-4">
+                <div class="flex gap-2 items-center ">
+                   <img src="./images/Vector43.png" class="p-[3px] rounded bg-[#FFDFDF]" alt="">
+                   <p class="capitalize">sales</p>
+                </div>
+                <h1 class="text-center py-2 font-semibold text-4xl">$34,512</h1>
+                <div class="w-full bg-[#FFDFDF] rounded-full my-2">
+                   <div class="h-1 bg-Danger rounded-full" style="width: 70%;"></div>
+                </div>
+               </div>
+            </div>
+        </div>
+
+        <!--  -->
+
+        <div class="mt-6">
+           <div class="sm:flex-col md:flex-row flex">
+               <div class="">
+                <img src="./images/Gender.png" alt="">
+               </div>
+               <div class="">
+                <img src="./images/Age range.png" alt="">
+               </div>
+           </div>
+        </div>
+       </div>
+    </article>
+    <script src="main.js"></script>
+</body>
+</html>

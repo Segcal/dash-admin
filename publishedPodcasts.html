@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Published Podcasts</title>
+  <link rel="stylesheet" href="./css/dashboard.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+   integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+            sm: '480px',
+            md: '768px',
+            lg: '976px',
+            xl: '1440px'
+          },
+        extend: {
+          colors: {
+            lightPurple: '#6E39CB',
+            Danger: '#F93131',
+            lightBlue: '#D7FFC3',
+            brandBlue: '#533FE4',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans bg-gray-50">
+    <article class="flex">
+      <div class="sidebar bg-gray-50 overflow- shadow-lg fixed top-0 bottom-0 lg:left-0  w-[300px] h-[100vh] hidden lg:block" id="menu">
+        <div class="logo flex justify-center items-center py-8">
+          <img src="images/LOGO2.png" alt="">
+        </div>
+        <div class="items">
+           <ul class="flex-col justify-center items-center pt-4">
+             <li class="pr-4 mt-2 border-l-4 border-transparent">
+              <a class="flex gap-4 px-8 text-gray-700 items-center py-2" href="dashboard.html">
+                <img src="images/bLh.png" alt="">
+                <span class="capitalize font-medium text-xl">home</span>
+              </a>
+             </li>
+
+             <li class="pr-4 mt-2 border-l-4 border-transparent">
+              <a class="flex gap-4 px-8 text-gray-700 items-center py-2" href="./PodcastersList.html">
+                <img src="images/Vector.png" alt="">
+                <span class="capitalize font-medium text-xl">Podcasters</span>
+              </a>
+             </li>
+
+             <li class="border-l-4 border-lightPurple pr-4">
+                <a class="flex gap-4 px-8 text-lightPurple items-center py-2 rounded-r-md hover:opacity-80 bg-[#DECCFE]" href="#">
+                  <img src="images/applications.png" alt="">
+                  <span class="capitalize font-medium text-xl">Published Podcasts</span>
+                </a>
+               </li>
+           </ul>
+        </div>
+        <div class="bottom bg-white px-4 py-2 rounded shadow-lg bottom-0 absolute my-4 mx-8">
+           <div class="flex justify-between">
+            <div class="flex items-center gap-4">
+              <img src="images/profile-user 2.png" alt="">
+              <div class="flex-col flex text-lightPurple">
+                  <a href="#">Administrator</a>
+                  <a href="#">admin@jiveify.com</a>
+              </div>
+          </div>
+          <a href="#">
+            <img src="images/dot.png" alt="">
+           </a>
+           </div>
+        </div>
+      </div>
+      <div class="w-full lg:ml-[20rem] px-6">
+      <section>
+        <div class="flex justify-between items-center">
+          <div class="flex items-center gap-6 mt-4">
+            <div class="flex items-center bg-gray-100 w-full px-6 py-[6px] rounded-md">
+               <input type="text" class="px-4 py-[5px] bg-gray-100 focus:outline-none" placeholder="Search anything here...">
+               <button type="submit" class="">
+                  <i class="bi bi-search text-xl text-gray-900"></i>
+               </button>
+            </div>
+        </div>
+        <div class="flex items-center gap-4 hidden md:flex mt-4">
+            <a href="#">
+                <img src="./images/Notification.png" alt="">
+            </a>
+            <p class="font-bold text-gray-400  md:block"><span class="text-black">Hello!</span> Andrea Gomez</p>
+            <a href="#">
+                <img src="./images/Frame 38551.png" alt="">
+            </a>
+        </div>
+        <a href="#" class="bg-black text-4xl font-semibold text-gray-200 rounded-md mt-2 hover:opacity-80 mx-4  lg:hidden w-[35px] block" id="burger">
+          <i class="bi bi-filter-left"></i>
+        </a>
+         </div>
+      </section>
+
+        <!--  -->
+       <div class="mt-12">
+           <div class="flex justify-between items-center my-4">
+              <h1 class="font-bold text-xl text-lightPurple">Featured <span class="text-[#352839]">Podcasts</span></h1>
+              <a href="#" class="text-[#D4B79C] font-medium">View all</a>
+           </div>
+           <div>
+               <div class="sm:flex-col md:flex-row flex gap-4">
+                    <div class="flex justify-center object-cover bg-gray-200 shadow-md hover:shadow-none p-[5px] rounded-md">
+                        <img src="./images/D1.png" alt="">
+                    </div>
+                    <div class="flex justify-center object-cover bg-gray-200 shadow-md hover:shadow-none p-[5px] rounded-md">
+                        <img src="./images/D2.png" alt="">
+                    </div>
+                    <div class="flex justify-center object-cover bg-gray-200 shadow-md hover:shadow-none p-[5px] rounded-md">
+                        <img src="./images/D3.png" alt="">
+                    </div>
+                    <!-- <div class="flex justify-center">
+                        <img src="./images/D1.png" alt="">
+                    </div> -->
+               </div>
+               <div class="text-center md:text-left my-4">
+                <h1 class="font-bold text-2xl text-[#352839] capitalize">Your recent viewed podcasts</h1>
+               </div>
+               <div class="sm:flex-col md:flex-row flex gap-4">
+                <div class="flex justify-center object-cover bg-gray-200 shadow-md hover:shadow-none p-[5px] rounded-md">
+                    <img src="./images/2.4.png" alt="">
+                </div>
+                <div class="flex justify-center object-cover  hidden md:flex bg-gray-200 shadow-md hover:shadow-none p-[5px] rounded-md">
+                    <img src="./images/2.1.png" alt="">
+                </div>
+                <div class="flex justify-center object-cover bg-gray-200 shadow-md hover:shadow-none p-[5px] rounded-md">
+                    <img src="./images/2.2 (1).png" alt="">
+                </div>
+                <div class="flex justify-center  hidden md:flex object-cover bg-gray-200 shadow-md hover:shadow-none p-[5px] rounded-md">
+                    <img src="./images/2.3.png" alt="">
+                </div>
+           </div>
+           <div class="flex justify-between sm:flex-col md:flex-row  items-center my-4 ">
+            <h1 class="font-bold text-xl text-[#352839]">Popular Podcasts, Recommended just for <span class="text-[#A86F67]">You</span></h1>
+            <a href="#" class="text-[#D4B79C] font-medium">View all</a>
+         </div>
+         <div class="sm:flex-col md:flex-row flex gap-4">
+            <div class="flex justify-center object-cover bg-gray-200 shadow-md hover:shadow-none p-[5px] rounded-md">
+                <img src="./images/D4.png" alt="">
+            </div>
+            <div class="flex justify-center object-cover bg-gray-200 shadow-md hover:shadow-none p-[5px] rounded-md">
+                <img src="./images/D5.png" alt="">
+            </div>
+            <div class="flex justify-center hidden md:flex object-cover bg-gray-200 shadow-md hover:shadow-none p-[5px] rounded-md">
+                <img src="./images/D6.png" alt="">
+            </div>
+            <div class="flex justify-center object-cover bg-gray-200 shadow-md hover:shadow-none p-[5px] rounded-md">
+                <img src="./images/D7.png" alt="">
+            </div>
+            <div class="flex justify-center hidden md:flex object-cover bg-gray-200 shadow-md hover:shadow-none p-[5px] rounded-md">
+                <img src="./images/D8.png" alt="">
+            </div>
+       </div>
+
+           </div>
+       </div>
+     </div>
+    </article>
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!--  -->
